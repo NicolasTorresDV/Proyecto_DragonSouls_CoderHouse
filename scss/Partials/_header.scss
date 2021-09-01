@@ -1,0 +1,44 @@
+@import "./variables";
+
+.titles{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+    padding: 50px;
+
+    &__titleIndex{
+        margin: 0;
+        padding: 0;
+        font-family: $fonts-mainFont;
+        font-size: 6rem;
+    }
+}
+
+/* Adaptacion de clases de Boostrap: NavBar */
+.bg-light
+{
+    background-color: black !important;
+    display: flex !important;
+    flex-flow: row-reverse wrap !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bolder !important;
+    font-family: $fonts-text !important;
+    font-size: 1.2rem !important;
+    transition: all 1s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    transform: scale(1.1);
+    color: red !important;
+    width: auto;
+}
+
+.navbar-collapse {
+    flex-flow: row-reverse wrap;
+}
