@@ -63,6 +63,17 @@ body {
   background-color: black;
   overflow-x: hidden; }
 
+.secondaryTitle {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  color: black;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+
 .presentation {
   margin: 0;
   height: 400px;
@@ -138,21 +149,30 @@ body {
 
 .characters {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
+  grid-row-gap: 30px;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-left: 20%;
   margin-right: 20%;
   align-items: center;
-  justify-content: center;
-  grid-row-gap: 20px;
-  grid-column-gap: 20px; }
-  .characters__charactersItems p {
+  justify-content: center; }
+  .characters__charactersBox {
+    background-color: white;
     display: grid;
-    grid-row-gap: 15px; }
-  .characters__charactersItems img {
-    height: 500px;
-    width: 350px; }
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 500px;
+    overflow: hidden;
+    border-radius: 5%; }
+    .characters__charactersBox .characters__charactersItems p {
+      padding: 2%;
+      display: grid;
+      grid-row-gap: 15px;
+      font-family: "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 18px; }
+    .characters__charactersBox .characters__charactersItems img {
+      width: -webkit-fill-available;
+      height: -webkit-fill-available; }
 
 #minimo {
   list-style-position: inside; }
@@ -166,11 +186,23 @@ body {
     margin: 8px 8px 0 0; }
 
 .form {
-  width: 60%;
+  background-color: white;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   padding-left: 20%;
-  padding-right: 20%; }
+  padding-right: 20%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .form__section {
-    margin-bottom: 15px; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    .form__section__button {
+      background-color: black;
+      color: white;
+      padding: 1%; }
 
 /*KEYFRAMES */
 @keyframes fadeMe {
@@ -226,6 +258,13 @@ body {
       animation: none; }
   .indexCarrousel {
     height: auto; } }
+
+@media screen and (max-width: 1332px) {
+  .characters__charactersBox {
+    display: block;
+    border-radius: 0; }
+  .characters__charactersItems img {
+    display: none; } }
 
 @media screen and (max-width: 1018px) {
   .presentation__presentationText {
