@@ -149,6 +149,21 @@ body{
     }
 }
 
+#characters{
+    &__one{
+        animation: leftToRight 1s normal;
+    }
+    &__two{
+        animation: rightToLeft 1s normal;
+    }
+    &__three{
+        animation: leftToRight 1s normal;
+    }
+    &__four{
+        animation: rightToLeft 1s normal; 
+    }
+}
+
 #minimo{
     list-style-position: inside;
 
